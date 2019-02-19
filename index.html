@@ -22,14 +22,14 @@
                         <div class="card-body">
                            <form action="" method="post">
                                <div class="form-group">
-                                 <label for="email">Email</label>
+                                 <label for="email" class="text-dark">Email</label>
                                  <input type="text" name="email" id="email" class="form-control" aria-describedby="helpId">
                                  <small id="helpId" class="text-muted">Informe o e-mail registrado em seu cadastro.</small>
                                </div>
                                <div class="form-group">
-                                    <label for="senha">Senha</label>
+                                    <label for="senha" class="text-dark">Senha</label>
                                     <input type="password" name="senha" id="senha" class="form-control">
-                                    <small id="helpId" class="text-muted"><a href="" data-toggle="modal" data-target="#exampleModalCenter">Esqueci minha senha</a></small>
+                                    <small id="helpId"><a href="" data-toggle="modal" data-target="#exampleModalCenter" class="text-muted">Esqueci minha senha</a></small>
                                 </div>
                                 <div class="form-group">
                                     <a href="painel.html" name="" id="" class="btn btn-indigo-darken-4 btn-block">Login</a>
@@ -46,7 +46,7 @@
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
-            <div class="modal-header bg-blue-darken-4 text-light"">
+            <div class="modal-header bg-indigo-darken-4 text-light"">
               <h5 class="modal-title id="exampleModalCenterTitle">Esqueci minha senha</h5>
               <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close">
                     <i class="fas fa-times-circle" aria-hidden="true"></i>
@@ -55,7 +55,7 @@
             <form action="" method="post">
             <div class="modal-body">
                     <div class="form-group">
-                        <label for="email">Email</label>
+                        <label for="email" class="text-dark">Email</label>
                         <input type="email" name="email" id="email" class="form-control" aria-describedby="helpId" required>
                         <small id="helpId" class="text-muted">Informe o e-mail registrado em seu cadastro.</small>
                     </div>
@@ -69,9 +69,9 @@
           </div>
         </div>
       </div>
-    <script src="js/jquery.js"></script>
-    <script src="js/popper.js"></script>
-    <script src="js/bootstrap.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 </body>
 
 </html>
