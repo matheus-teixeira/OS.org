@@ -1,0 +1,77 @@
+
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Login</title>
+</head>
+
+<body class="bg-indigo-darken-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-0 col-md-0 col-lg-4"></div>
+            <div class="col-sm-0 col-md-0 col-lg-4">
+                <div class="card border-dark mt-5 shadow shadow-lg rounded-0">
+                        <h1 class="display-1 card-img-top text-center pt-5 text-color6">
+                          <img src="img/logo.png" alt="" class="img-fluid w-25">
+                        </h1>
+                        <div class="card-body">
+                           <form action="" method="post">
+                               <div class="form-group">
+                                 <label for="email">Email</label>
+                                 <input type="text" name="email" id="email" class="form-control" aria-describedby="helpId">
+                                 <small id="helpId" class="text-muted">Informe o e-mail registrado em seu cadastro.</small>
+                               </div>
+                               <div class="form-group">
+                                    <label for="senha">Senha</label>
+                                    <input type="password" name="senha" id="senha" class="form-control">
+                                    <small id="helpId" class="text-muted"><a href="" data-toggle="modal" data-target="#exampleModalCenter">Esqueci minha senha</a></small>
+                                </div>
+                                <div class="form-group">
+                                    <a href="painel.html" name="" id="" class="btn btn-indigo-darken-4 btn-block">Login</a>
+                                </div>
+                           </form>
+                        </div>
+                </div>
+            </div>
+            <div class="col-sm-0 col-md-0 col-lg-4"></div>
+        </div>
+    </div>
+
+<!-- Esqueci minha senha -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header bg-blue-darken-4 text-light"">
+              <h5 class="modal-title id="exampleModalCenterTitle">Esqueci minha senha</h5>
+              <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close">
+                    <i class="fas fa-times-circle" aria-hidden="true"></i>
+              </button>
+            </div>
+            <form action="" method="post">
+            <div class="modal-body">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" class="form-control" aria-describedby="helpId" required>
+                        <small id="helpId" class="text-muted">Informe o e-mail registrado em seu cadastro.</small>
+                    </div>
+            </div>
+            <div class="modal-footer bg-color15">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-success">Recuperar senha</button>
+                </div>
+            </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    <script src="js/jquery.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.js"></script>
+</body>
+
+</html>

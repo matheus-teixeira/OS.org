@@ -1,0 +1,62 @@
+$indigo-darken-4: #49517e;
+$black: #000000;
+
+$theme-colors: (
+    'indigo-darken-4': $indigo-darken-4,
+    'black': $black
+);
+
+.card {
+    transition: .3s;
+    color: aliceblue;
+}
+
+.card:hover {
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+}
+
+.card a{
+    color: aliceblue;
+}
+
+.card a:hover{
+    color: aliceblue;
+}
+
+.autocomplete {
+    position: relative;
+    display: inline-block;
+}
+
+.autocomplete-items {
+    position: absolute;
+    border: 1px solid #d4d4d4;
+    border-bottom: none;
+    border-top: none;
+    z-index: 99;
+    /*position the autocomplete items to be the same width as the container:*/
+    top: 100%;
+    left: 0;
+    right: 0;
+}
+
+.autocomplete-items div {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    border-bottom: 1px solid #d4d4d4;
+}
+
+.autocomplete-items div:hover {
+    background-color: #e9e9e9;
+}
+
+.autocomplete-active {
+    background-color: DodgerBlue !important;
+    color: #ffffff;
+}
+
+$enable-responsive-font-sizes: true !important;
+$enable-rounded: false;
+
+@import "../../node_modules/bootstrap/scss/bootstrap";

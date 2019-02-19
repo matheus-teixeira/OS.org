@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="img/Docket_%C3%ADcone_50x50.png" type="image/x-icon">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+crossorigin="anonymous">
+<link rel="stylesheet" href="css/main.css">
+<title>OS.org | Painel de Controle</title>
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<div class="container">
+    <a href="painel.html" class="navbar-brand mb-0 h1">OS.org | Painel de Controle</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-user"></i> Matheus Teixeira
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="configuracoes.php">Configurações</a>
+                    <a class="dropdown-item" href="index.php">Visualizar site</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Sair</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+</nav>
+
+<!-- Novo Cliente -->
+<div class="modal fade" id="novoCliente" tabindex="-1" role="dialog" aria-labelledby="novoCliente" aria-hidden="true">
+<div class="modal-dialog" role="document">
+    <div class="modal-content">
+    <div class="modal-header">
+        <h5 class="modal-title" id="novoCliente">Cadastrar um novo cliente</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+<form action="" method="post">
+    <div class="modal-body">
+        <div class="form-group">
+          <label for="nome">Nome</label>
+          <input type="text" name="nome" id="nome" class="form-control">
+        </div>
+        <div class="form-group">
+                <label for="cpf">CPF</label>
+                <input type="text" name="cpf" id="cpf" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="telefone">Telefone</label>
+            <input type="text" name="telefone" id="telefone" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="text" name="email" id="email" class="form-control" aria-describedby="emailHelp">
+            <small id="emailHelp" class="text-muted">O e-mail é necessário pois você poderia mandar futuramente a OS de seu aparelho para este cliente.</small>
+        </div>
+        <hr>
+        <div class="form-group">
+            <label for="cep">CEP</label>
+            <input type="text" name="cep" id="cep" class="form-control" maxlength="9" onblur="pesquisacep(this.value);">
+        </div>
+        <div class="form-group">
+            <label for="rua">Rua</label>
+            <input type="text" name="rua" id="rua" class="form-control">
+        </div>
+        <div class="form-group">
+                <label for="numCasa">Número</label>
+                <input type="text" name="numCasa" id="numCasa" class="form-control col-sm-12 col-md-6">
+        </div>
+        <div class="form-group">
+            <label for="bairro">Bairro</label>
+            <input type="text" name="bairro" id="bairro" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="cidade">Cidade</label>
+            <input type="text" name="cidade" id="cidade" class="form-control">
+        </div>
+        <div class="form-group">
+                <label for="estado">Estado</label>
+                <input type="text" name="estado" id="estado" class="form-control">
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        <button type="button" class="btn btn-primary">Salvar</button>
+    </div>
+</form>
+    </div>
+</div>
+</div>
+
+<main class="container py-5">
+<div class="form-row align-items-center">
+    <input type="search" name="pesquisaUser" id="pesquisaUser" class="form-control col-10" placeholder="Pesquise pelo CPF"
+        onkeyup="pesquisaUser()">
+    <div class="col-auto">
+        <button type="submit" class="btn btn-primary">Pesquisar</button>
+    </div>
+    <div class="py-2">
+        <button class="btn btn-info" data-toggle="modal" data-target="#novoCliente">Cadastrar um novo cliente</button>
+    </div>
+</div>
+<hr>
+<table class="table table-striped" id="tableUser">
+    <thead>
+        <tr>
+            <th scope="col">CPF</th>
+            <th>Nome</th>
+            <th>Telefone</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td scope="row">17686992756</th>
+            <td>Matheus Teixeira</td>
+            <td>994282445</td>
+            <td>
+                <button class="btn btn-sm btn-secondary"><i class="fas fa-user-edit"></i> Editar</button>
+                <button class="btn btn-sm btn-info"><i class="fas fa-eye"></i> Visualizar</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</main>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/script.js"></script>
+<script src="js/cep.js"></script>
+</body>
+
+</html>
