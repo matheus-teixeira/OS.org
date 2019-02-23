@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="img/Docket_%C3%ADcone_50x50.png" type="image/x-icon">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+crossorigin="anonymous">
+<link rel="stylesheet" href="css/main.css">
+<title>OS.org | Painel de Controle</title>
+</head>
+
+<body onload="RetornaDataHoraAtual()">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<div class="container">
+<a href="painel.html" class="navbar-brand mb-0 h1">OS.org | Painel de Controle</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="navbarNav">
+<ul class="navbar-nav mx-auto">
+<li class="nav-item">
+<a class="nav-link" href="clientes.html">Clientes</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="os.html">Ordem de Serviço</a>
+</li>
+</ul>
+</div>
+
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+<ul class="navbar-nav ml-auto">
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+    aria-haspopup="true" aria-expanded="false">
+    <i class="fas fa-user"></i> Matheus Teixeira
+</a>
+<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+    <a class="dropdown-item" href="configuracoes.php">Configurações</a>
+    <a class="dropdown-item" href="index.php">Visualizar site</a>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item" href="#">Sair</a>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+
+<main class="container py-5">
+<form action="">
+<div class="card">
+<div class="card-header">
+    Dados do Cliente
+</div>
+<div class="card-body">
+<div class="form-row">
+    <div class="col-sm-12 col-md-4 form-group">
+        <label for="nome" class="font-weight-light">Nome</label>
+        <input type="text" name="nome" id="nome" class="about-form" value="Matheus Teixeira">
+    </div>
+    <div class="col-sm-12 col-md-4 form-group">
+        <label for="nome" class="font-weight-light">CPF</label>
+        <input type="text" name="nome" id="nome" class="about-form" value="17686992756">
+    </div>
+    <div class="col-sm-12 col-md-4 form-group">
+        <label for="nome" class="font-weight-light">Telefone</label>
+        <input type="text" name="nome" id="nome" class="about-form" value="994282445">
+    </div>
+    <div class="col-sm-12 col-md-12 form-group">
+        <label for="nome" class="font-weight-light">Email</label>
+        <input type="text" name="nome" id="nome" class="about-form" value="contato.matheusteixeira@gmail.com">
+    </div>
+    <div class="col-sm-12 col-md-6 form-group">
+        <label for="nome" class="font-weight-light">Endereço</label>
+        <input type="text" name="nome" id="nome" class="about-form" value="Rua Di Cavalcante">
+    </div>
+    <div class="col-sm-12 col-md-2 form-group">
+        <label for="nome" class="font-weight-light">Número</label>
+        <input type="text" name="nome" id="nome" class="about-form" value="220">
+    </div>
+    <div class="col-sm-12 col-md-4 form-group">
+        <label for="nome" class="font-weight-light">Bairro</label>
+        <input type="text" name="nome" id="nome" class="about-form" value="Rosa dos Ventos">
+    </div>
+    <div class="col-sm-12 col-md-4 form-group">
+        <label for="nome" class="font-weight-light">Cidade</label>
+        <input type="text" name="nome" id="nome" class="about-form" value="Nova Iguaçu">
+    </div>
+    <div class="col-sm-12 col-md-4 form-group">
+        <label for="nome" class="font-weight-light">Estado</label>
+        <input type="text" name="nome" id="nome" class="about-form" value="RJ">
+    </div>
+    <div class="col-sm-12 col-md-4 form-group">
+            <label for="nome" class="font-weight-light">CEP</label>
+            <input type="text" name="nome" id="nome" class="about-form" value="26278655">
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Atualizar" class="btn btn-success">
+    </div>
+</div>
+</div>
+</div>
+</form>
+<hr>
+<div class="card">
+<div class="card-header">
+OSs do Cliente
+</div>
+<div class="card-body">
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title">Moto G 5	</h5>
+        <h6 class="card-subtitle mb-2 text-muted">58245</h6>
+        <div class="card-subtitle">Status: <span class="badge badge-success">Concluido</span>
+        </div>
+        <div class="card-subtitle">Técnico: Matheus Teixeira</div>
+        <hr>
+        <p class="card-text">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum cupiditate, distinctio magni maxime odio possimus.
+        </p>
+        <a href="#" class="btn btn-info"><i class="fas fa-eye"></i></a>
+        <a href="#" class="btn btn-secondary"><i class="fas fa-pencil-alt"></i></a>
+        <a href="#" class="btn btn-success"><i class="fas fa-print"></i></a>
+    </div>
+</div>
+</div>
+</div>
+
+</main>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/script.js"></script>
+<script src="js/cep.js"></script>
+</body>
+
+</html>
