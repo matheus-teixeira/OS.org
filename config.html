@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/Docket_%C3%ADcone_50x50.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+    <title>OS.org | Painel de Controle</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a href="painel.html" class="navbar-brand mb-0 h1">OS.org | Painel de Controle</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="clientes.html">Clientes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="os.html">Ordem de Serviço</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-user"></i> Matheus Teixeira
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="config.html">Configurações</a>
+                            <a class="dropdown-item" href="index.php">Visualizar site</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Sair</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<!-- Novo Técnico -->
+<div class="modal fade" id="novoTecnico" tabindex="-1" role="dialog" aria-labelledby="novoTecnico" aria-hidden="true">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+    <div class="modal-header">
+        <h5 class="modal-title">Cadastrar um novo técnico</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <form action="" method="post">
+        <div class="modal-body">
+            <div class="form-group">
+                <label for="nome">Nome</label>
+                <input type="text" name="nome" id="nome" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="cpf">CPF</label>
+                <input type="text" name="cpf" id="cpf" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="telefone">Telefone</label>
+                <input type="text" name="telefone" id="telefone" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="text" name="email" id="email" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="email">Nível</label>
+                <select class="custom-select">
+                    <option selected>Selecione o nível do técnico</option>
+                    <option value="1">Administrador</option>
+                    <option value="2">Técnico</option>
+                </select>
+                <small id="emailHelp" class="form-text text-muted">A única diferença entre Administrador e Técnico é que os administradores são os únicos que conseguem cadastrar um novo usuário, já os técnicos, não podem.</small>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+            <button type="button" class="btn btn-primary">Salvar</button>
+        </div>
+    </form>
+</div>
+</div>
+</div>
+
+<main class="container py-5">
+    <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <a class="nav-item nav-link active" id="nav-tecnicos-tab" data-toggle="tab" href="#nav-tecnicos" role="tab"
+                aria-controls="nav-tecnicos" aria-selected="true">Técnicos</a>
+            <a class="nav-item nav-link" id="nav-status-tab" data-toggle="tab" href="#nav-status" role="tab"
+                aria-controls="nav-status" aria-selected="false">Status</a>
+            <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab"
+                aria-controls="nav-contact" aria-selected="false">Contact</a>
+        </div>
+    </nav>
+
+    <div class="tab-content" id="nav-tabContent">
+    <!--Técnicos-->
+    <div class="tab-pane fade show active" id="nav-tecnicos" role="tabpanel" aria-labelledby="nav-tecnicos-tab">
+    <div class="py-2">
+        <button class="btn btn-info" data-toggle="modal" data-target="#novoTecnico">Cadastrar um novo técnico</button>
+    </div>
+    <div class="table-responsive">
+            <table class="table table-striped" id="tableUser">
+                    <thead>
+                        <tr>
+                            <th scope="col">CPF</th>
+                            <th>Nome</th>
+                            <th>Telefone</th>
+                            <th>Nível</th>
+                            <th>Status</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td scope="row">17686992756</th>
+                            <td>Matheus Teixeira</td>
+                            <td>994282445</td>
+                            <td>Administrador</td>
+                            <td><span class="badge badge-success">Ativo</span></td>
+                            <td>
+                                <button class="btn btn-sm btn-secondary"><i class="fas fa-user-edit"></i> Editar</button>
+                                <button class="btn btn-sm btn-warning"><i class="fas fa-user-minus"></i> Desativar</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+    </div>
+    </div>
+    <!--Status-->
+        <div class="tab-pane fade" id="nav-status" role="tabpanel" aria-labelledby="nav-status-tab">
+
+        </div>
+        <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+
+        </div>
+    </div>
+</main>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
